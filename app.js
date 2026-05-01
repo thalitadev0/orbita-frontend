@@ -1,5 +1,5 @@
 // Endereço da API — mude aqui quando fizer deploy
-const API_URL = 'https://orbita-backend-production.up.railway.app';
+const API_URL = 'https://orbita-backend-jlqp.onrender.com';
 
 /* ================================================
    app.js — JavaScript compartilhado do Orbita
