@@ -393,13 +393,14 @@
           return;
         }
 
-        // Salva o token e redireciona
-        Orbita.store.salvar('token',   dados.token);
-        Orbita.store.salvar('usuario', dados.usuario);
+        Orbita.toast(
+          dados.mensagem || 'Conta criada! Verifique seu e-mail para ativar sua conta.',
+          'success'
+        );
 
-        Orbita.toast('Conta criada! Bem-vindo ao Orbita 🎉', 'success');
-
-        setTimeout(() => { window.location.href = 'feed.html'; }, 800);
+        setTimeout(() => {
+          showTab('login');
+        }, 1200);
 
       } catch (e) {
         erro.textContent = 'Servidor offline. Verifique se o backend está rodando.';
